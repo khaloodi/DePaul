@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <style>
+  body {font-family: Calibri, Georgia; font-size: 11pt; }
+  h1 {font-family: Cambria, Arial, Helvetica; font-weight: bold; color: #800000;}
+  h2, h3 {font-family: Cambria, Arial, Helvetica; color: #228b22;}
+  h1 {font-size: 26pt; }
+  h2 {font-size: 14pt; font-weight: bold; }
+  h3 {font-size: 12pt; }
+  .code {font-family: Courier New; font-weight: bold; }
+  table {border-radius: 5px; border: 2px solid black; }
+  td, th {border: 1px solid gray; }
+  ul.innerlist {list-style: none; margin: 0; padding: 0}
+  </style>
+</head>
+
+<body>
+<h1>CSC 400: Discrete Structures<br>Problem set 1</h1>
+<h3>80 points</h3>
+<p></p>
+<h2>Instructions</h2>
+<p>Answer each of the problems below. Your document must be a MS Word document (.doc or .docx), a PDF (.pdf), or a text file (.txt). Do not submit an image file. If you write your solutions by hand, scan them into a PDF and submit that. Check the scan to make sure it is legible! Often there is not enough light on the original so that the scanned document is very hard to read. Submit your file into the D2L submission folder set up for it.</p>
+<p>Clearly label each solution with the problem numbers mentioned here.</p>
+<h2>Problems</h2>
+<p><strong>1. Proof by induction [20 points]</strong> Using the proof by induction given in the week 1 summary as a model, show that the following equation is correct.</p>
+<p><img src="sumofsquares.png"></p>
+<p>Remember that a proof by induction has three parts:</p>
+<ol>
+<li>Basis step (<em>n</em> = 0)</li>
+<li>Inductive hypothesis (<em>n</em> = <em>k</em>)</li>
+<li>Inductive step (<em>n</em> = <em>k</em>+1)</li>
+</ol>
+<p>Each of these must appear in your proof to get full credit.</p>
+<p></p>
+<p><strong>2. Combinatorics of subsets [30 points]</strong> There is a way to think about subsets as binary strings, that is, a sequence of zeroes and ones. For example, given the set <em>A</em> = {<em>a</em>, <em>b</em>, <em>c</em>, <em>d</em>}, we can think of a binary string as a way of expressing which elements in the set are in a subset. To do this, list the elements in order: <em>a</em>, <em>b</em>, <em>c</em>, <em>d</em>. The first digit of a binary string is 1 if <em>a</em> is in the subset and 0 otherwise; it's the same with the following elements. So the string 1001 represents the subset {<em>a</em>, <em>d</em>}.</p>
+<ol type="a">
+<li>List the subsets of <em>A</em> row-by-row where the first row has subsets of size 0, the second all subsets of size 1, and so forth. You will end up with five rows.</li>
+<li>To the right of each row, write down the number of subsets in it.</li>
+<li>Add up these row counts and write down the total number of subsets.</li>
+<li>Now do the above three steps for the set <em>B</em> = {<em>a</em>, <em>b</em>, <em>c</em>, <em>d</em>, <em>e</em>}</li>
+<li>In a row, write down the five counts you found for the set <em>A</em></li>
+<li>In a row, write down the six counts you found for the set <em>B</em></li>
+<li>Above the row you just wrote for <em>A</em>, write down the counts for a set of size 4; above that the counts for a set of size 3; continue this for sets of sizes 2, 1, and 0.</li>
+<li>The resulting triangular table has a name. What is it?</li>
+</ol>
+<p></p>
+<p><strong>3. Proving set equalities (direct proof) [10 points]</strong> Recall the definitions of the set operations ∪, ∩, and complement:</p>
+<ul>
+<li><em>x</em>∈<em>A</em>∪<em>B</em> ⇔ <em>x</em>∈<em>A</em> or <em>x</em>∈<em>B</em></li>
+<li><em>x</em>∈<em>A</em>∩<em>B</em> ⇔ <em>x</em>∈<em>A</em> and <em>x</em>∈<em>B</em></li>
+<li><em>x</em>∈<em>A</em><sup><em>C</em></sup> ⇔ <em>x</em>∉<em>A</em></li>
+<li><em>x</em>∈<em>A</em> ⇔ <em>x</em>∉<em>A</em><sup><em>C</em></sup></li>
+</ul>
+<p></p>
+<p>Using those defintions, here is a direct proof of one of DeMorgan's laws.</p>
+<p><strong>Theorem.</strong> (<em>A</em>∪<em>B</em>)<sup><em>C</em></sup> = <em>A</em><sup><em>C</em></sup>∩<em>B</em><sup><em>C</em></sup></p>
+<p>Proof. To prove a set equality like this, you show that the left hand side is a subset of the right hand side and vice versa. So first we'll show that (<em>A</em>∪<em>B</em>)<sup><em>C</em></sup>⊆<em>A</em><sup><em>C</em></sup>∩<em>B</em><sup><em>C</em></sup>.</p>
+<p align="center"><em>x</em>∈(<em>A</em>∪<em>B</em>)<sup><em>C</em></sup> ⇒ <em>x</em>∉<em>A</em>∪<em>B</em> ⇒ <em>x</em>∉<em>A</em> and <em>x</em>∉<em>B</em> ⇒ <em>x</em>∈<em>A</em><sup><em>C</em></sup> and <em>x</em>∈<em>B</em><sup><em>C</em></sup> ⇒ <em>x</em>∈<em>A</em><sup><em>C</em></sup>∩<em>B</em><sup><em>C</em></sup>.</p>
+<p>Next we'll show that <em>A</em><sup><em>C</em></sup>∩<em>B</em><sup><em>C</em></sup>⊆(<em>A</em>∪<em>B</em>)<sup><em>C</em></sup>.</p>
+<p align="center"><em>x</em>∈<em>A</em><sup><em>C</em></sup>∩<em>B</em><sup><em>C</em></sup> ⇒ <em>x</em>∈<em>A</em><sup><em>C</em></sup> and <em>x</em>∈<em>B</em><sup><em>C</em></sup> ⇒ <em>x</em>∉<em>A</em> and <em>x</em>∉<em>B</em> ⇒ <em>x</em>∉<em>A</em>∪<em>B</em> ⇒ <em>x</em>∈(<em>A</em>∪<em>B</em>)<sup><em>C</em></sup>.</p>
+<p>Using the same approach, please show that <em>A</em><sup><em>C</em></sup>∪<em>B</em> = (<em>A</em>∩<em>B</em><sup><em>C</em></sup>)<sup><em>C</em></sup>.</p>
+<p><strong>4. Euclid's algorithm for GCD [20 points]</strong> Using the row-by-row technique explained in class and in the week 1 summary, apply Euclid's algorithm to find the greatest common divisor of the following pairs of numbers:</p>
+<ol type="a">
+<li>81, 64</li>
+<li>201, 100</li>
+<li>1025, 65</li>
+<li>your student id number and 40320 For each of the above, write down the row-by-row table generated by the algorithm.
+<p></p>
+</li>
+</ol>
+</body></html>
