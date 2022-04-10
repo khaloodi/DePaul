@@ -1,3 +1,5 @@
+# Khaled Adad
+
 print("Membership Categories:")
 print("1 Standard adult membership (40)")
 print("2 Child (age 12 and under) (20)")
