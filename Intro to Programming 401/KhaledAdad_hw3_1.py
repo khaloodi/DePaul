@@ -28,4 +28,4 @@ def formats(num):
             print(str3.format(lst[i], lst[i+1], lst[i+2]))
         print(str1.format(lst[i]))
 
-print(formats(4))
+print(formats(9))
