@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+  body {font-family: Calibri, Georgia; font-size: 11pt; }
+  h1 {font-family: Cambria, Arial, Helvetica; font-weight: bold; color: #800000;}
+  h2, h3 {font-family: Cambria, Arial, Helvetica; color: #228b22;}
+  h1 {font-size: 26pt; }
+  h2 {font-size: 14pt; font-weight: bold; }
+  h3 {font-size: 12pt; }
+  .code {font-family: Courier New; font-weight: bold; }
+  table {border-radius: 5px; border: 2px solid black; }
+  td, th {border: 1px solid gray; }
+  ul.innerlist {list-style: none; margin: 0; padding: 0}
+  </style>
+</head>
+
+<body>
+<h1>CSC 400: Discrete Structures<br/>Problem set 2</h1>
+<h3>80 points</h3>
+<p>
+<h2>Instructions</h2>
+<p>
+Answer each of the problems below.  Your submission must be a single document and it must be a MS Word document (.doc or .docx), a PDF (.pdf), or a text file (.txt).  Do not submit an image file.  If you write your solutions by hand, scan them into a PDF and submit that.  Check the scan to make sure it is legible!  Often there is not enough light on the original so that the scanned document is very hard to read.  Submit your file into the D2L submission folder set up for it.
+</p>
+<p>
+Clearly label each solution with the problem numbers mentioned here.
+</p>
+<h2>Problems</h2>
+
+<p><strong>1. Relations and their properties [30 points]</strong> For the following, the relations are on &integers; (the integers).
+<ol type="a">
+<li><strong><em>x</em>|<em>y</em></strong>: "<em>x</em> divides <em>y</em>". This holds when <em>x</em> is a factor of <em>y</em>, in other words there is a <em>z</em> such that <em>y</em> = <em>x</em>&middot;<em>z</em>.  Prove or show a counterexample for each of these propeties: reflexive, symmetric, transitive.
+<li><strong><em>x</em>&nmid;<em>y</em></strong>: "<em>x</em> does <strong>not</strong> divide <em>y</em>". This holds when <em>x</em> is <strong>not</strong> a factor of <em>y</em>.  Prove or show a counterexample for each of these propeties: reflexive, symmetric, transitive.
+<li><strong><em>x</em>&equiv;<sub><em>n</em></sub><em>y</em></strong>: "<em>x</em> is <em>n</em>-equivalent to <em>y</em>". This holds when <em>x</em> - <em>y</em> is a multiple of <em>n</em>.  Prove or show a counterexample for each of these propeties: reflexive, symmetric, transitive.
+</ol>
+</p>
+
+<p><strong>2. Karatsuba multiplication [30 points]</strong> I recommend reviewing the lecture and the week 2 summary before tackling this problem.
+<ol type="a">
+<li>Using Karatsuba's algorithm, demonstrated in class, multiply <em>x</em> = 53 by <em>y</em> = 47.  As in the class demonstration, write down the values of <em>a</em>, <em>d</em>, <em>e</em>, and <em>x</em>&middot;<em>y</em>.
+<li>Use the algorithm to find the product <em>x</em>&middot;<em>y</em> where <em>x</em> = 4737 and <em>y</em> = 5345.  To do this, divide each four digit number into two two-digit pieces.  Computing <em>a</em> then requires finding <em>x</em><sub><em>H</em></sub>&middot;<em>y</em><sub><em>H</em></sub> = 47&middot;53.  But you have already done that in the previous step so just use that result.  The same goes for calculating <em>d</em> on the lower two digits of <em>x</em> and the lower two digits of <em>y</em>.  As in the previous problem, write down the values of <em>a</em>, <em>d</em>, <em>e</em>, and <em>x</em>&middot;<em>y</em>.
+</ol>
+</p>
+<p>
+This shows that Karatsuba's algorithm can be extended to multiplying two numbers containing any number of digits by invoking it recursively.  This way of defining an algorithm recursively will come up often in this and many other classes.
+</p>
+
+<p><strong>3. Horner's method for polynomial evaluation [20 points]</strong>
+</p>
+<ol type="a">
+<li>Using Horner's method, described in class and in the week 3 summary, rewrite the following polynomial into Horner form:
+3<em>x</em><sup>4</sup> + 12<em>x</em><sup>3</sup> + 15<em>x</em><sup>2</sup> + 21<em>x</em> + 42
+<li>Evaluate the polynomial for <em>x</em> = 11 and write down the value.
+<li>How many multiplications are needed to evaluate the polynomial in its original form?
+<li>How many multiplications are needed to evaluate the polynomial in its Horner form?
+</ol>
+</p>
+
+</body>
+</html>
