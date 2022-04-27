@@ -2,10 +2,12 @@
 
 #ceasar cypher
 
-from operator import indexOf
-
-message = input("Enter a string to encrypt: ")
-shift = input("Enter the number of charcters to shift by (integer): ")
+def main():
+    message = input("Enter message: ")
+    shift = int(input("Enter shift amount: "))
+    encryptedMsg = Ceasar(message, shift)
+    print(message)
+    print(encryptedMsg)
 
 def Ceasar(message, shift):
     # assuming shift will not be less than 0 or greater than 25
@@ -16,13 +18,16 @@ def Ceasar(message, shift):
 
     cipher = first_half + second_half
     enc = ""
+    print(f'alphabet: {alphabet}')
+    print(f'cipher: {cipher}')
 
     for i in message:
         if i.upper() in alphabet:
-            idx = message.index(i)
+            idx = alphabet.index(i)
             enc += cipher[idx]
+        else:
+            enc += i
 
-    print("message")
-    print(enc)
+    return enc
 
-Ceasar(message,shift)
+main()
