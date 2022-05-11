@@ -7,7 +7,7 @@ def upper_1():
     upperCaseFirstLetter = 0
 
     while True:
-        prompt = (input('Enter some a word: '))
+        prompt = (input('Enter a word: '))
 
         if prompt == '' or ' ' in prompt:
             break
